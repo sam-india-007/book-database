@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Database</title>
+    </head>
+    <body>
+
+        <h1>Book Database</h1>
+        <hr>
+        <h2>Register</h2>
+
+        <form action="" onsubmit="return false">
+            <label for="uname">Username:</label><br>
+            <input type="text" id="uname" name="uname"><br>
+            <label for="pass1">Password:</label><br>
+            <input type="password" id="pass1" name="pass1"><br>
+            <label for="pass2">Confirm Password:</label><br>
+            <input type="password" id="pass2" name="pass2"><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city"><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone"><br>
+            <label for="sex">Sex:</label><br>
+            <select id="sex">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="N">Do not wish to specify</option>
+            </select><br><br>
+            <button onclick="fun()">Submit</button>
+        </form> 
+
+        <script>
+            function fun(){
+                var uname = document.getElementById("uname").value;
+                var pass1 = document.getElementById("pass1").value;
+                var pass2 = document.getElementById("pass2").value;
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var city = document.getElementById("city").value;
+                var phone = document.getElementById("phone").value;
+                var sex = document.getElementById("sex").value;
+
+                if (pass1 != pass2){
+                    alert("Passwords do not match");
+                    window.location.replace = "register.html";
+                }
+
+                // 'use strict';
+                // let crypto = require('crypto');
+                // // logger 
+                // let logger = func => {
+                //     console.log(func);
+                // };
+
+                // let generateSalt = rounds => {
+                //     return crypto.randomBytes(Math.ceil(rounds / 2)).toString('hex').slice(0, rounds);
+                // };
+                // let hash = (password, salt) => {
+                //     if (password == null || salt == null) {
+                //         throw new Error('Must Provide Password and salt values');
+                //     }
+                //     if (typeof password !== 'string' || typeof salt !== 'string') {
+                //         throw new Error('password must be a string and salt must either be a salt string or a number of rounds');
+                //     }
+                //     return hasher(password, salt);
+                // };
+                // logger(hash(pass1, generateSalt(12)))
+
+            }
+        </script>
+        
+
+        
+
+    </body>
+</html>
